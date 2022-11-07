@@ -17,6 +17,8 @@ app.use(express.json())
 
 dotenv.config({path:'./config.env'})
 require('./db/conn')
+app.use(require('./router/auth'))
+
 const port = process.env.PORT
 
 // const User=require('./model/userSchema')
@@ -30,16 +32,3 @@ app.listen(port, () => {
 })
 
 
-//middleware
-const middleware=((req,res,next)=>{
-    console.log("hello middleware")
-    next()
-})
-
-app.get('/',async (req,res)=>{
-    res.send("hello")
-})
-app.get('/about',middleware, async (req,res)=>{
-    res.send("about")
-    
-})

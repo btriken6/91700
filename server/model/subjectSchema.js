@@ -1,10 +1,16 @@
 const mongoose=require('mongoose')
 const subjectSchema= new mongoose.Schema({
     name:{
-        type:String
+        type:String,
+        required:true
     },
     category:{
-        type:String
+        type:String,
+        required:true
+    },
+    collegeId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:collegeSchema
     }
 })
 

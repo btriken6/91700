@@ -6,7 +6,10 @@ const answerSchema = new mongoose.Schema({
     },
     userId:{
         type:mongoose.Schema.Types.ObjectId,
-        ref: userSchema
+        ref:userSchema
+    },
+    answer:{
+        type:String
     },
     dateCreated:{
         type:Date,

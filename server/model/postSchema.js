@@ -25,6 +25,9 @@ const postSchema = new mongoose.Schema({
             ref:answerSchema
         }
     ],
+    report:{
+        type:Number
+    },
     dateCreated:{
         type:Date,
         default: Date.now()
