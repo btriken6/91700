@@ -1,21 +1,36 @@
 const mongoose=require('mongoose')
 const userSchema= new mongoose.Schema({
     name:{
-        type:String
+        type:String,
+        required:true
     },
     email:{
-        type:String
+        type:String,
+        required:true
     },
     identificationNumber:{
         type:String,
-        default:""
+        required:true
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    phone:{
+        type:Number,
+        required:true
+    },
+    cPassword:{
+        type:String,
+        required:true
     },
     collegeId:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:collegeSchema
+        ref: collegeSchema
     },
     idProofPhoto:{
-        type:String
+        type:String,
+        required:true
     },
 
     type:{
@@ -26,3 +41,6 @@ const userSchema= new mongoose.Schema({
         default:0
     }
 })
+
+const User=mongoose.model('USER',userSchema)
+module.exports=User

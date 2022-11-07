@@ -4,6 +4,9 @@ const subjectSchema= new mongoose.Schema({
         type:String
     },
     category:{
-        type:string
+        type:String
     }
 })
+
+const Subject=mongoose.model('SUBJECT',subjectSchema)
+module.exports=Subject
