@@ -8,10 +8,6 @@ const subjectSchema= new mongoose.Schema({
     category:{
         type:String,
         required:true
-    },
-    collegeId:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"College"
     }
 })
 

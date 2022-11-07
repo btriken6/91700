@@ -21,11 +21,11 @@ app.use(require('./router/auth'))
 
 const port = process.env.PORT
 
-// const User=require('./model/userSchema')
-// const College=require('./model/collegeSchema')
+const User=require('./model/userSchema')
+const College=require('./model/collegeSchema')
 const Subject=require('./model/subjectSchema')
-// const Post=require('./model/postSchema')
-// const Answer=require('./model/answerSchema')
+const Post=require('./model/postSchema')
+const Answer=require('./model/answerSchema')
 
 app.listen(port, () => {
     console.log("started the server");

@@ -11,12 +11,10 @@ const answerSchema = new mongoose.Schema({
         ref:"User"
     },
     answer:{
-        type:String
+        type:String,
+        required:true
     },
-    dateCreated:{
-        type:Date,
-        default: Date.now()
-    }
-})
+    
+},{timestamps:true})
 const Answer=mongoose.model('ANSWER',answerSchema)
 module.exports=Answer

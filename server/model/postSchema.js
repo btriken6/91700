@@ -11,8 +11,8 @@ const postSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    postType:{
-        type:String
+    isPublic:{
+        type:Boolean
     },
     userId:{
         type:mongoose.Schema.Types.ObjectId,
@@ -31,10 +31,7 @@ const postSchema = new mongoose.Schema({
     report:{
         type:Number
     },
-    dateCreated:{
-        type:Date,
-        default: Date.now()
-    }
-})
+    
+}, {timestamps:true})
 const Post=mongoose.model('POST',postSchema)
 module.exports=Post

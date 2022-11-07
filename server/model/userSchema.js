@@ -21,10 +21,6 @@ const userSchema= new mongoose.Schema({
         type:Number,
         required:true
     },
-    cPassword:{
-        type:String,
-        required:true
-    },
     collegeId:{
         type:mongoose.Schema.Types.ObjectId,
         ref: "College"
@@ -37,9 +33,9 @@ const userSchema= new mongoose.Schema({
     type:{
         type:String
     },
-    verifyUser:{
-        type:Number,
-        default:0
+    isVerified:{
+        type:Boolean,
+        default:false
     }
 })
 
