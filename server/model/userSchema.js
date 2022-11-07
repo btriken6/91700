@@ -1,4 +1,5 @@
 const mongoose=require('mongoose')
+const College=require('./collegeSchema')
 const userSchema= new mongoose.Schema({
     name:{
         type:String,
@@ -26,7 +27,7 @@ const userSchema= new mongoose.Schema({
     },
     collegeId:{
         type:mongoose.Schema.Types.ObjectId,
-        ref: collegeSchema
+        ref: "College"
     },
     idProofPhoto:{
         type:String,

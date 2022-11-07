@@ -1,4 +1,7 @@
 const mongoose = require('mongoose')
+const Subject=require('./subjectSchema')
+const User=require('./userSchema')
+const Answer=require('./answerSchema')
 const postSchema = new mongoose.Schema({
     title:{
         type:String,
@@ -13,16 +16,16 @@ const postSchema = new mongoose.Schema({
     },
     userId:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:userSchema
+        ref:"User"
     },
     subjectId:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:subjectSchema
+        ref:"Subject"
     },
     answers:[
         {
             type:mongoose.Schema.Types.ObjectId,
-            ref:answerSchema
+            ref:"Answer"
         }
     ],
     report:{

@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const Subject=require('./subjectSchema')
+const User=require('./userSchema')
 const collegeSchema = new mongoose.Schema({
     collegeName: {
         type: String
@@ -12,12 +14,12 @@ const collegeSchema = new mongoose.Schema({
     subjects: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: subjectSchema
+            ref: "Subject"
         }
     ],
     adminId:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: userSchema
+        ref: "User"
     }
 }) 
 const College=mongoose.model('COLLEGE',collegeSchema)
