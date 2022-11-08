@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const College=require('./collegeSchema')
+// const College=require('./collegeSchema')
 const subjectSchema= new mongoose.Schema({
     name:{
         type:String,

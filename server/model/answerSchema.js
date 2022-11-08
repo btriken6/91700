@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const User = require('./userSchema')
-const Post=require("./postSchema")
+// const User = require('./userSchema')
+// const Post=require("./postSchema")
 const answerSchema = new mongoose.Schema({
     post_id:{
         type: mongoose.Schema.Types.ObjectId,

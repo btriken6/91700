@@ -1,15 +1,18 @@
 const mongoose = require('mongoose')
-const Subject=require('./subjectSchema')
-const User=require('./userSchema')
+// const Subject=require('./subjectSchema')
+// const User=require('./userSchema')
 const collegeSchema = new mongoose.Schema({
     collegeName: {
-        type: String
+        type: String,
+        required:true
     },
     location: {
-        type: String
+        type: String,
+        required:true
     },
     pin: {
-        type: Number
+        type: Number,
+        required:true
     },
     subjects: [
         {
