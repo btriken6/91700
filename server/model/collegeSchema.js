@@ -1,6 +1,4 @@
 const mongoose = require('mongoose')
-// const Subject=require('./subjectSchema')
-// const User=require('./userSchema')
 const collegeSchema = new mongoose.Schema({
     collegeName: {
         type: String,

@@ -1,7 +1,4 @@
 const mongoose = require('mongoose')
-// const Subject=require('./subjectSchema')
-// const User=require('./userSchema')
-// const Answer=require('./answerSchema')
 const postSchema = new mongoose.Schema({
     title:{
         type:String,

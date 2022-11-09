@@ -27,7 +27,6 @@ const College=require('./model/collegeSchema')
 const Subject=require('./model/subjectSchema')
 const Post=require('./model/postSchema')
 const Answer=require('./model/answerSchema')
-const Image=require('./model/image.model')
 
 app.listen(port, () => {
     console.log("started the server");
