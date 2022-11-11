@@ -16,6 +16,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json())
 
+
 dotenv.config({path:'./config.env'})
 require('./db/conn')
 app.use(require('./router/auth'))
